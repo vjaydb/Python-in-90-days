@@ -30,3 +30,19 @@ while outstanding_balance>0:
     outstanding_balance -= emi
     print (f"Outstanding loan amount is {outstanding_balance} for the month {month}")
     month += 1
+
+##Break Loop
+stocks2 = ["Suzlon", "Amazon", "Dlf"]
+for stock in stocks2:
+    if stock == "Dlf":
+        print("Found DLf - Hence stopping search")
+        break
+    print (stock)
+for stock in stocks2:
+    if stock == "Amazon":
+        continue
+    print(stock)
+for i, stock in enumerate(stocks2,1):
+    print(f"{i}. {stock}")
+    
+           
