@@ -38,11 +38,15 @@ for stock in stocks2:
         print("Found DLf - Hence stopping search")
         break
     print (stock)
+#continue Loop
 for stock in stocks2:
     if stock == "Amazon":
         continue
     print(stock)
+# Enumerate Loop
 for i, stock in enumerate(stocks2,1):
     print(f"{i}. {stock}")
+##1535
+
     
            
