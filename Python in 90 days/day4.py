@@ -46,7 +46,39 @@ for stock in stocks2:
 # Enumerate Loop
 for i, stock in enumerate(stocks2,1):
     print(f"{i}. {stock}")
-##1535
 
-    
+#Enumurate loop "Exercise 1"
+stocks3 = ["Ather Energy", "Sesagoa", "Hindalco", "Suzlon", "Sunpharma"]
+for i, stock in enumerate(stocks3, 1):
+    print(f"{i}. {stock}")
+
+#Loan EMI,  Excercise 2
+
+outstanding_loan_amount = 500000
+emi = 12500
+month= 1
+while outstanding_loan_amount >12500:
+    outstanding_loan_amount -= emi
+    print(f"Outstanding Loan amount is INR.{outstanding_loan_amount} for the end of the month {month}st/nd/rd/th")
+    month += 1
+
+##challenge BMI and category print
+
+bmi_values = [14.5, 17.2, 22.1, 27.4, 32.8, 37.1, 41.5]
+for i, bmi in enumerate(bmi_values,1):
+    if bmi <16:
+        print(f"{i}: Severely Underweight")
+    if bmi >=16 and bmi <= 18.4:
+        print(f"{i}: Underweight")
+    if bmi >=18.5 and bmi <=24.9:
+        print (f"{i}: Normal")
+    if bmi >=25 and bmi <=29.9:
+        print (f"{i}: Overweight")
+    if bmi >=30 and bmi <=34.9:
+        print (f"{i}: Obsese Class 1")
+    if bmi >=35 and bmi <=39.9:
+        print (f"{i}: Obese Class 2")
+    if bmi >=40:
+        print (f"{i}: Severely Obese")
+
            
