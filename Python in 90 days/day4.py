@@ -21,3 +21,12 @@ for n in range(len(stocks1)):
         print(f"{stocks1[n]}:+{profit_percent:.2f}%:-Hold")
     else:
         print(f"{stocks1[n]}:{profit_percent:.2f}%:Review")
+
+##Loan EMI Outstanding Balance basic
+outstanding_balance =108000
+emi = 12000
+month =1 
+while outstanding_balance>0:
+    outstanding_balance -= emi
+    print (f"Outstanding loan amount is {outstanding_balance} for the month {month}")
+    month += 1
