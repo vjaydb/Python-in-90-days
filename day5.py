@@ -52,7 +52,8 @@ def calculate_emi_1(principal, rate=10, tenure=12, debug=False):
     else:
         return emi 
 
-Loan2= calculate_emi_1(500000,8.5,12, debug=False)
-print()
+emi2=calculate_emi_1(500000,8.5,12)
+
+##EMi calculation with total interest and total payment
 
 
