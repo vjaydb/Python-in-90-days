@@ -31,8 +31,39 @@ shivani_bmi = calculate_bmi(44,154)
 print(f"Shivani's BMI is {shivani_bmi:.2f}")
 
 ## Loan Case, counting EMI by Making function
-def calculate_emi(principal, rate=10, tenure=12)
+def calculate_emi(principal, rate=10, tenure=12):
     monthly_rate= rate/1200
-    emi=principal*monthly_rate*(1+rate)**tenure
-    tenure-=1
-print(f"Cal")
+    emi=principal*monthly_rate*(1+monthly_rate)**tenure
+    emi= emi/(1+monthly_rate)**tenure-1
+    return emi 
+
+Loan1= calculate_emi(100000,10,12)
+print(f"Your Emi for Loan1 is INR.{Loan1:.2f} ")
+
+##Task by Chatgpt
+
+def calculate_emi_1(principal, rate=10, tenure=12, debug=False):
+    monthly_rate=rate/1200
+    emi=numerator=principal*monthly_rate*(1+monthly_rate)**tenure
+    denominator=(1+monthly_rate)**tenure-1
+    emi=numerator/denominator
+    if debug == True:
+        print(f"monthly_rate : {monthly_rate}, numerator : {numerator}, denominator {denominator}")
+    else:
+        print(emi)  
+          
+Loan2= calculate_emi_1(500000,8.5,12, debug=True):
+    print(emi)
+
+############################################################################################
+
+def calculate_emi_1(principal, rate=10, tenure=12, debug=False):
+    monthly_rate=rate/1200
+    emi=numerator=principal*monthly_rate*(1+monthly_rate)**tenure
+    denominator=(1+monthly_rate)**tenure-1
+    emi=numerator/denominator
+    return emi
+    if debug == True:
+        print(f"monthly_rate : {monthly_rate}, numerator : {principal*monthly_Rate*(1+monthly_rate)**tenure}, denominator {(1+monthly_rate)**tenure-1}")
+Loan2= calculate_emi_1(500000,8.5,12, debug=True):
+    print(emi)
