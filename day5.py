@@ -48,22 +48,11 @@ def calculate_emi_1(principal, rate=10, tenure=12, debug=False):
     denominator=(1+monthly_rate)**tenure-1
     emi=numerator/denominator
     if debug == True:
-        print(f"monthly_rate : {monthly_rate}, numerator : {numerator}, denominator {denominator}")
+        print(f"monthly_rate : {monthly_rate:.2f}%, numerator : {numerator:.2f}, denominator {denominator:.2f}")
     else:
-        print(emi)  
-          
-Loan2= calculate_emi_1(500000,8.5,12, debug=True):
-    print(emi)
+        return emi 
 
-############################################################################################
+Loan2= calculate_emi_1(500000,8.5,12, debug=False)
+print()
 
-def calculate_emi_1(principal, rate=10, tenure=12, debug=False):
-    monthly_rate=rate/1200
-    emi=numerator=principal*monthly_rate*(1+monthly_rate)**tenure
-    denominator=(1+monthly_rate)**tenure-1
-    emi=numerator/denominator
-    return emi
-    if debug == True:
-        print(f"monthly_rate : {monthly_rate}, numerator : {principal*monthly_Rate*(1+monthly_rate)**tenure}, denominator {(1+monthly_rate)**tenure-1}")
-Loan2= calculate_emi_1(500000,8.5,12, debug=True):
-    print(emi)
+
