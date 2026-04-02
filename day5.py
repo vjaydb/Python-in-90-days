@@ -56,4 +56,19 @@ emi2=calculate_emi_1(500000,8.5,12)
 
 ##EMi calculation with total interest and total payment
 
+def calculate_emi3(principle, rate=8.5, tenure=12, debug=False):
+    monthly_rate=rate/1200
+    numerator_emi=principle*monthly_rate*(1+monthly_rate)**tenure
+    denominator_emi=(1+monthly_rate)**tenure-1
+    emi=numerator_emi/denominator_emi
+    
+    if debug:
+        print(f"Monthly Rate of interest {monthly_rate:.2f}%, Numerator of EMI {numerator_emi:.2f}, denominator of emi {denominator_emi:.2f}")
+    return emi
 
+loan3=calculate_emi3(210000, 10, 12)
+principle=210000
+total_payment= emi*12
+interest=total_payment-principle
+print(f"EMI will be INR.{emi}, Total Payment made by borrower will be {total_payment}, and interest will be {interest}")
+    
