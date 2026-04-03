@@ -1,12 +1,35 @@
 #Loan EMI,  Excercise 2, Retaken from day4 for st/nd/rd/th logic
+##########Taken From line 132 ####Prefix at number like 1st
+def cordinal(n):
+    remainder=n % 10
+    if n == 1:
+        return(f"{n}st")
+    elif n==2:
+        return(f"{n}nd")
+    elif n==3:
+        return (f"{n}rd")
+    elif n==4 and 5 and 6 and 7 and 8 and 9 and 10 and 11 and 12 and 13:
+        return(f"{n}th")
+    elif remainder == 4 and 5 and 6 and 7 and 8 and 9 and 0:
+        return(f"{n}th")
+    elif remainder == 1:
+        return(f"{n}st")
+    elif remainder == 2:
+        return(f"{n}nd")
+    elif remainder == 3:
+        return(f"{n}rd")
+    else:
+        return(f"{n}th")
 
 outstanding_loan_amount = 500000
 emi = 12500
 month= 1
 while outstanding_loan_amount >12500:
     outstanding_loan_amount -= emi
-    print(f"Outstanding Loan amount is INR.{outstanding_loan_amount} for the end of the month {month}st/nd/rd/th")
+    month_1=cordinal(month)
+    print(f"Outstanding Loan amount is INR.{outstanding_loan_amount} for the end of the month {month_1}")
     month += 1
+    
 
 ## Creating Functions
 def greet():
@@ -132,20 +155,21 @@ bmi5=bmi_calculation3("ShivGoluMolu",85, 155)
 def cordinal(n):
     remainder=n % 10
     if n == 1:
-        print(f"{n}st")
+        return(f"{n}st")
     elif n==2:
-        print(f"{n}nd")
+        return(f"{n}nd")
     elif n==3:
-        print(f"{n}rd")
-    elif n==4 and 5 and 6 and 7 and 8 and 9 and 10 and 11 and 12 and 13:
-        print(f"{n}th")
-    elif remainder == 4 and 5 and 6 and 7 and 8 and 9 and 0:
-        print(f"{n}th")
+        return(f"{n}rd")
+    elif n==4 or 5 or 6 or 7 or 8 or 9 or 10 or 11 or 12 or 13:
+        return(f"{n}th")
+    elif remainder == 4 or 5 or 6 or 7 or 8 or 9 or 0:
+        return(f"{n}th")
     elif remainder == 1:
-        print(f"{n}st")
+        return(f"{n}st")
     elif remainder == 2:
-        print (f"{n}nd")
+        return(f"{n}nd")
+    elif remainder == 3:
+        return(f"{n}rd")
     else:
-        print (f"{n}rd")
+        return(f"{n}th")
 number1=cordinal(225)
-print(number1)
