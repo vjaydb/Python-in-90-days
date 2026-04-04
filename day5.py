@@ -8,9 +8,9 @@ def cordinal(n):
         return(f"{n}nd")
     elif n==3:
         return (f"{n}rd")
-    elif n==4 and 5 and 6 and 7 and 8 and 9 and 10 and 11 and 12 and 13:
+    elif n==4 or 5 or 6 or 7 or 8 or 9 or 10 or 11 or 12 or 13:
         return(f"{n}th")
-    elif remainder == 4 and 5 and 6 and 7 and 8 and 9 and 0:
+    elif remainder == 4 or 5 or 6 or 7 or 8 or 9 or 0:
         return(f"{n}th")
     elif remainder == 1:
         return(f"{n}st")
