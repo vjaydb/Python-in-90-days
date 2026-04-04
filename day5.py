@@ -172,4 +172,5 @@ def cordinal(n):
         return(f"{n}rd")
     else:
         return(f"{n}th")
-number1=cordinal(225)
+number1=cordinal(31)
+print(number1)
