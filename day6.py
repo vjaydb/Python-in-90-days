@@ -37,14 +37,13 @@ print(double)
 
 ## Database and Analyser
 portfolio=[
-    {"name"="Ather Energy", "buy_price"=618, "current_price"=790, "quantity"=501}
-    {"name"="Reliance", "buy_price"=2300, "current_price"=2600, "quantity"=20}
-    {"name"="Suzlon", "buy_price"=80, "current_price"=40, "quantity"=5000}
-    {"name"="Waaree Energy", "buy_price"=2300, "current_price"=3000, "quantity"=120}
+    {"name":"Ather Energy", "buy_price":618, "current_price":790, "quantity":501},
+    {"name":"Reliance", "buy_price":2300, "current_price":2600, "quantity":20},
+    {"name":"Suzlon", "buy_price":80, "current_price":40, "quantity":5000},
+    {"name":"Waaree Energy", "buy_price":2300, "current_price":3000, "quantity":120},
     ]
 for stock in portfolio:
-    change_prc= (stock{current_price}-stock{buy_price})/stock(buy_price)*100
-    value= stock{current_price}*stock{quantity}
-    status:
-        if change_prc>0:
-            
+    change_prc= ((stock["current_price"] - stock["buy_price"])/stock["buy_price"])*100
+    value= stock["current_price"]*stock["quantity"]
+    status= "Hold" if change_prc>0 else "Review"
+    print(f"{stock['name']:<15}{change_prc:+.2f}% INR.{value:<7,.0f} {status}")
