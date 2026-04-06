@@ -47,3 +47,42 @@ for stock in portfolio:
     value= stock["current_price"]*stock["quantity"]
     status= "Hold" if change_prc>0 else "Review"
     print(f"{stock['name']:<15}{change_prc:+.2f}% INR.{value:<7,.0f} {status}")
+
+
+#excercise 1 Portfolio
+portfolio_1 = [
+    {"name" : "Sula Wine Yards", "buy_price":180, "current_price":120, "quantity":3500},
+    {"name": "Ashok Leyland", "buy_price":1500, "current_price":1410, "quantity":124},
+    {"name": "Laxmi Organics", "buy_price":2400, "current_price":1200, "quantity":310},
+    {"name": "Abbot India", "buy_price":9500, "current_price":11500, "quantity":45},
+    {"name" : "Ahmednagar Forging", "buy_price":145, "current_price":25, "quantity":1254}
+]
+
+for stock in portfolio_1:
+    change_prc1= ((stock["current_price"]-stock["buy_price"])/(stock["buy_price"]))*100
+    value= stock["current_price"]*stock["quantity"]
+    status=  "Hold" if change_prc1>0 else "Review"
+    print(f"{stock['name']:<20} {change_prc1:+.2f}% INR.{value:<10}{status:<10}")
+
+##Excercise 2 
+
+profitable_trade=[ stock["name"] for stock["name"] in portfolio_1 if change_prc1>0 ] 
+print(profitable_trade)
+
+stock_list =[stock["name"] for stock["name"] in portfolio_1]
+print(stock_list)
+
+#Excercise 3
+
+trader1 = {
+    "name" : "vivan"
+    "portfolio" : {
+        "equity" : 145000
+        "gold" : 15000
+        "mutual fund" : 140000
+        "FD" : 200000
+    }
+}
+
+total_investment = [ trader1 [["portfolio"] ["equity"] + [ "portfolio"] [" gold"]
+print(total_investment)
