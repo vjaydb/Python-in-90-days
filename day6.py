@@ -66,23 +66,27 @@ for stock in portfolio_1:
 
 ##Excercise 2 
 
-profitable_trade=[ stock["name"] for stock["name"] in portfolio_1 if change_prc1>0 ] 
+profitable_trade=[
+     stock["name"] for stock in portfolio_1 
+     if (stock["current_price"]-stock["buy_price"] ) > 0 
+]
 print(profitable_trade)
 
-stock_list =[stock["name"] for stock["name"] in portfolio_1]
+stock_list =[
+    stock["name"] for stock in portfolio_1]
 print(stock_list)
 
-#Excercise 3
+Excercise 3
 
-trader1 = {
-    "name" : "vivan"
-    "portfolio" : {
-        "equity" : 145000
-        "gold" : 15000
-        "mutual fund" : 140000
-        "FD" : 200000
-    }
-}
+#trader1 = {
+  #  "name" : "vivan"
+    #"portfolio" : {
+     #   "equity" : 145000
+#        "gold" : 15000
+#        "mutual fund" : 140000
+#        "FD" : 200000
+#    }
+#}
 
-total_investment = [ trader1 [["portfolio"] ["equity"] + [ "portfolio"] [" gold"]
-print(total_investment)
+#total_investment = [ trader1 [["portfolio"] ["equity"] + [ "portfolio"] [" gold"]
+#print(total_investment)
