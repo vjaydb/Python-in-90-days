@@ -70,23 +70,46 @@ profitable_trade=[
      stock["name"] for stock in portfolio_1 
      if (stock["current_price"]-stock["buy_price"] ) > 0 
 ]
-print(profitable_trade)
+print(f"The profitable trade is {profitable_trade}")
 
 stock_list =[
     stock["name"] for stock in portfolio_1]
-print(stock_list)
+print(f"Here is the stock list from portfolio: {stock_list}")
 
-Excercise 3
+current_values_list = [
+    stock ["current_price"] * stock["quantity"]  for stock in portfolio_1 
+    
+]
+print(f"The values of different segments of the portfolio are as follows : {current_values_list}")
 
-#trader1 = {
-  #  "name" : "vivan"
-    #"portfolio" : {
-     #   "equity" : 145000
-#        "gold" : 15000
-#        "mutual fund" : 140000
-#        "FD" : 200000
-#    }
-#}
+##Excercise 3
 
-#total_investment = [ trader1 [["portfolio"] ["equity"] + [ "portfolio"] [" gold"]
-#print(total_investment)
+trader1 = {
+    "name" : "vivan",
+    "portfolio" : {
+       "equity" : 145000,
+        "gold" : 15000,
+        "mutual fund" : 140000,
+        "FD" : 200000,
+    }
+}
+
+portfolio_2 =  trader1["portfolio"]
+portfolio_values = sum(portfolio_2.values())
+print(f"Total Investment INR.{portfolio_values:,}")
+
+def portfolio_summary(trader1):
+    portfolio_3 = trader1["portfolio"]
+    portfolio_values_1 = sum(portfolio_3.values())
+    equity_prc= (trader1 ["portfolio"] ["equity"]/portfolio_values_1 )*100
+    for category, amount in portfolio_3.items():
+        share= (amount/portfolio_values_1)*100
+        print(f"{category:<15} INR.{amount:,} ({share:.2f}%)")
+    if equity_prc >60:
+        print(f"Recommendation: Too Agressive")
+    elif equity_prc <30:
+        print(f"Recommendation: Too Conservative")
+    else:
+        print(f"Recommendation: Balanced")
+portfolio_summary(trader1)
+        
