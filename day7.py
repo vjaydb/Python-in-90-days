@@ -9,12 +9,11 @@ raw_tickers = [
     "  NSE:hal  ",
     "BSE:IRFC ",
 ]
+for trade in raw_tickers:
+    print(trade.strip())
+    print(trade.upper())
 
-#print(raw_tickers.strip[])
-#print(raw_tickers.upper[])
-#for exchange, stock in raw_tickers:
-#    print(exchange_list)
-
+    print(trade.)
 
 # Excersise 2, Write a function def parse_trade(trade_string) that takes a string like "Ather,750,830,50" and returns a dictionary with name, buy_price, current_price, quantity. Handle the case where the string is malformed (wrong number of parts).
 trades = [
@@ -28,5 +27,4 @@ trades = [
     "IRCTC,720,800,20"
 ]
 
-for stock, buy_price, current_price, quantity in trades:
-    print(stock)
+#print(trades.strip().split("-"))
