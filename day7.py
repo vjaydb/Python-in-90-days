@@ -60,11 +60,22 @@ for trade in trades:
 
 paragraph = ("Why does it matter for India specifically? India has limited uranium resources but one of the world's largest deposits of thorium. Physicist Homi Bhabha designed a three-stage nuclear programme: Stage 1 uses uranium to generate power and produce plutonium; Stage 2 uses plutonium in breeder reactors like the PFBR; Stage 3 will use thorium to generate uranium-233 for long-term, self-sustaining energy. Gulf News The PFBR project was built indigenously with contributions from over 200 Indian industries, including several MSMEs, aligning with the government's Aatmanirbhar Bharat (self-reliance) initiative. Channeliam")
 
-def word_counter(text):
+def word_enlister(text):
     text=text.lower()
     for ch in ".,'-()?!:;":
         text=text.replace(ch," ")
     return text.split()
 
-result=(word_counter(paragraph))
-print(result)
+result=(word_enlister(paragraph))
+#print(result)
+
+def word_counter(result):
+    for word in result:
+        result.count(word)
+        try:
+            return { "word" : int (result.count(word))
+            }
+        except:     
+            return "null"
+#print(word_enlister(paragraph))        
+print(word_counter(result))
