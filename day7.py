@@ -56,9 +56,15 @@ for trade in trades:
          
 #print(trades.strip().split("-"))
 
-Exercise 3 :Exercise 3: Write a function that takes any text and returns a word frequency count as a dictionary — how many times each word appears. Test it with a paragraph of your choice.
+#Exercise 3 :Exercise 3: Write a function that takes any text and returns a word frequency count as a dictionary — how many times each word appears. Test it with a paragraph of your choice.
 
 paragraph = ("Why does it matter for India specifically? India has limited uranium resources but one of the world's largest deposits of thorium. Physicist Homi Bhabha designed a three-stage nuclear programme: Stage 1 uses uranium to generate power and produce plutonium; Stage 2 uses plutonium in breeder reactors like the PFBR; Stage 3 will use thorium to generate uranium-233 for long-term, self-sustaining energy. Gulf News The PFBR project was built indigenously with contributions from over 200 Indian industries, including several MSMEs, aligning with the government's Aatmanirbhar Bharat (self-reliance) initiative. Channeliam")
 
 def word_counter(text):
-    word=text.split(" ").split()
+    text=text.lower()
+    for ch in ".,'-()?!:;":
+        text=text.replace(ch," ")
+    return text.split()
+
+result=(word_counter(paragraph))
+print(result)
