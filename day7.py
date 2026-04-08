@@ -1,4 +1,5 @@
 # Strings
+#Excercise 1 : formatting from strings of data
 raw_tickers = [
     "  nse:reliance  ",
     "BSE:HPCL ",
@@ -30,13 +31,34 @@ trades = [
     "Zomato,90,110,abc",
     "IRCTC,720,800,20"
 ]
+
+def parse_trade_info(trade):
+    parts=trade.split(",")
+
+    if len(parts) !=4:
+        return "Invalid Format"
+    name, buy, sell, qty = parts 
+
+    try: 
+        return {
+            "stock_name":name,
+            "buy_price": float(buy),
+            "sell_price": float(sell),
+            "quantity": int(qty),
+
+        }
+    except:
+        return "Invalid Number"
+    
 for trade in trades:
-    trade_v=trade.strip().split(",")
-    for trade_v1  trade_v:
-        trade_v11=trade_v1.isalpha()
-        if trade_v11 == Truine:
-            stock_name=trade_v11 
-            print(stock_name)
-         
+    result=parse_trade_info(trade)
+    print(result)        
          
 #print(trades.strip().split("-"))
+
+Exercise 3 :Exercise 3: Write a function that takes any text and returns a word frequency count as a dictionary — how many times each word appears. Test it with a paragraph of your choice.
+
+paragraph = ("Why does it matter for India specifically? India has limited uranium resources but one of the world's largest deposits of thorium. Physicist Homi Bhabha designed a three-stage nuclear programme: Stage 1 uses uranium to generate power and produce plutonium; Stage 2 uses plutonium in breeder reactors like the PFBR; Stage 3 will use thorium to generate uranium-233 for long-term, self-sustaining energy. Gulf News The PFBR project was built indigenously with contributions from over 200 Indian industries, including several MSMEs, aligning with the government's Aatmanirbhar Bharat (self-reliance) initiative. Channeliam")
+
+def word_counter(text):
+    word=text.split(" ").split()
