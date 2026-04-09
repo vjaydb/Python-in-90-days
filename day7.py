@@ -62,20 +62,16 @@ paragraph = ("Why does it matter for India specifically? India has limited urani
 
 def word_enlister(text):
     text=text.lower()
-    for ch in ".,'-()?!:;":
-        text=text.replace(ch," ")
+    for ch in ".,;/?!':[]{}()":
+        text=text.replace(ch, " ")
     return text.split()
-
-result=(word_enlister(paragraph))
-#print(result)
-
-def word_counter(result):
-    for word in result:
-        result.count(word)
-        try:
-            return { "word" : int (result.count(word))
-            }
-        except:     
-            return "null"
-#print(word_enlister(paragraph))        
-print(word_counter(result))
+def word_counter(words):
+    freq={}
+    for word in words:
+        if word in freq:
+            freq[word]+=1
+        else:
+            freq[word]=1
+    return freq
+word_list=word_enlister(paragraph)
+print(word_counter(word_list))
