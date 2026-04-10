@@ -1,1 +1,6 @@
-Ather Energy, 609, 810/nSuzlon, 86, 45,6000/nAhmednagar Forging, 150, 20, 500/nRVNL, 400,300, 5000/nAshokLeyland, 30, 500, 50000Lodha Devlopers, 500, 1200, 435
+Ather Energy, 609, 810, 501
+Suzlon, 86, 45,6000
+Ahmednagar Forging, 150, 20, 500
+RVNL, 400,300, 5000
+AshokLeyland, 30, 500, 50000
+Lodha Devlopers, 500, 1200, 435
