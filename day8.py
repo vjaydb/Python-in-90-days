@@ -27,3 +27,21 @@ with open("text.txt", "r") as f:
         trade=line.strip()
         #print(trade)
         print(parse_trade_info(trade))
+        trade_info=parse_trade_info(trade)
+#Profit Loss counting per trade 
+  
+        if isinstance(trade_info, dict):
+            change_prc=(trade_info["sell_price"]-trade_info["buy_price"])*trade_info["quantity"]
+            if change_prc>0:
+                msg=(f"Trade in {trade_info["stock_name"]} has occured profit of +INR.{change_prc:,.0f}/-")
+            else:
+                msg=(f"Trade in {trade_info["stock_name"]} has occured Loss of -INR.{change_prc:,.0f}/-")
+            
+        else:
+            msg(trade_info)
+        print(msg)
+            with open ("Trade_Report.txt", "w") as f:
+                f.write(msg + "\n")
+            with open ("Trade_Report.txt" "r") as f:
+                f.read()
+            
