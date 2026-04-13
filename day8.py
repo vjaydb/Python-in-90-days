@@ -39,9 +39,13 @@ with open("text.txt", "r") as f:
             
         else:
             msg(trade_info)
-        print(msg)
-            with open ("Trade_Report.txt", "w") as f:
-                f.write(msg + "\n")
-            with open ("Trade_Report.txt" "r") as f:
-                f.read()
-            
+        #print(msg)
+         #   with open ("Trade_Report.txt", "w") as f:
+         #       f.write(msg + "\n")
+         #   with open ("Trade_Report.txt" "r") as f:
+         #       f.read()
+        report.write(msg + "\n")
+    
+##CSV file
+    with open("file.csv","w")as f:
+        writer=writer.csv
