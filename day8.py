@@ -44,8 +44,18 @@ with open("text.txt", "r") as f:
          #       f.write(msg + "\n")
          #   with open ("Trade_Report.txt" "r") as f:
          #       f.read()
-        report.write(msg + "\n")
+       # report.write(msg + "\n")
     
 ##CSV file
-    with open("file.csv","w")as f:
-        writer=writer.csv
+import csv
+with open("file.csv","w", newline="")as f:
+    writer=csv.writer(f)
+    writer.writerow(["stock","buy price", "sell price", "quantity"])
+    writer.writerow(["Ather Energy", 618, 958, 501])
+    writer.writerow(["DLF", 550, 650, 85])
+
+with open("file.csv", "r")as f:
+    reader=csv.DictReader(f)
+    for row in reader:
+        print(row["stock"], row["buy price"])
+
